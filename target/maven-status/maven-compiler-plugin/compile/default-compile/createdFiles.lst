@@ -1,0 +1,11 @@
+com\askcts\training\mknowles\advworks\service\BusinessEntityService.class
+com\askcts\training\mknowles\advworks\dao\BusinessEntityDao.class
+com\askcts\training\mknowles\advworks\dao\PersonDaoImpl.class
+com\askcts\training\mknowles\advworks\controller\PersonController.class
+com\askcts\training\mknowles\advworks\model\BusinessEntity.class
+com\askcts\training\mknowles\advworks\model\Person.class
+com\askcts\training\mknowles\advworks\service\BusinessEntityServiceImpl.class
+com\askcts\training\mknowles\advworks\service\PersonServiceImpl.class
+com\askcts\training\mknowles\advworks\service\PersonService.class
+com\askcts\training\mknowles\advworks\dao\BusinessEntityDaoImpl.class
+com\askcts\training\mknowles\advworks\dao\PersonDao.class
