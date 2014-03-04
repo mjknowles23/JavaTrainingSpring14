@@ -2,7 +2,8 @@ package com.askcts.training.mknowles.advworks.service;
 
 import com.askcts.training.mknowles.advworks.model.BusinessEntity;
 
-public interface IBusinessEntityService {
+public interface IBusinessEntityService 
+{
 	void persistBusinessEntity(BusinessEntity businessEntity);
 	BusinessEntity findBusinessEntityById(int id);
 	void updateBusinessEntity(BusinessEntity businessEntity);

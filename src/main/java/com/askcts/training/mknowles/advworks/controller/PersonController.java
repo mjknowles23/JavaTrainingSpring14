@@ -34,7 +34,6 @@ import com.askcts.training.mknowles.advworks.service.IBusinessEntityService;
 public class PersonController
 {
 	@Autowired private IPersonService personService;
-	@Autowired private IBusinessEntityService businessEntityService;
 	
 	/**
 	 * Summary:
@@ -68,14 +67,8 @@ public class PersonController
 	
 	@RequestMapping(value = "add", method = RequestMethod.POST)
 	public ModelAndView add(@ModelAttribute Person newPerson) 
-	{	
-		// Create new Business Entity to satisfy foreign key dependency
-		// of an entry in the Person table.
-		BusinessEntity businessEntity = new BusinessEntity();
-		businessEntityService.persistBusinessEntity(businessEntity);
-		
-		newPerson.setId(businessEntity.getId());
-		personService.saveOrUpdatePerson(newPerson);
+	{			
+		personService.persistPerson(newPerson);
 		return new ModelAndView("addEditConfirm", "person", newPerson);
 	}
 
@@ -115,14 +108,8 @@ public class PersonController
 	@RequestMapping(value = "edit/{id}", method = RequestMethod.POST)
 	public ModelAndView edit(@ModelAttribute Person editedPerson, @PathVariable int id) 
 	{
-		// Get all the existing information of the chosen person so that NULLS will
-		// not be entered when updating the person entry.
-		Person originalPerson = personService.findPersonById(id);
-		
-		originalPerson.setFirstName(editedPerson.getFirstName());
-		originalPerson.setLastName(editedPerson.getLastName());
-		personService.saveOrUpdatePerson(originalPerson);
-		return new ModelAndView("addEditConfirm", "person", originalPerson);
+		personService.updatePerson(editedPerson);
+		return new ModelAndView("addEditConfirm", "person", editedPerson);
 	}
 	
 	/**
@@ -160,7 +147,6 @@ public class PersonController
 	{
 		String fullName = deletedPerson.getFirstName() + " " + deletedPerson.getLastName();
 		personService.deletePerson(deletedPerson);
-		businessEntityService.deleteBusinessEntity(new BusinessEntity(id));
 		return new ModelAndView("deleteConfirm", "fullName", fullName);
 	}
 }

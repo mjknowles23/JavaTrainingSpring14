@@ -1,3 +1,18 @@
+/*
+ * Summary:
+ *
+ * This class is used to model an entry in the Person table in 
+ * the AdventureWorks database.
+ *
+ * Author: Michael Knowles
+ * 
+ * Date: March 3, 2014
+ * 
+ * Copyright: Copyright (c) 2014 Computer Technology Solutions, Inc.  ALL RIGHTS RESERVED
+ *
+ * MVC Training Project - Spring 2014
+ */
+
 package com.askcts.training.mknowles.advworks.model;
 
 import javax.persistence.Column;
@@ -7,9 +22,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Person.Person")
-public class Person {
-	
-
+public class Person 
+{
 		@Id
 		@Column(name="BusinessEntityID", nullable=false)
 		private int id;

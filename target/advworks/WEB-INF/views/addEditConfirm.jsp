@@ -7,7 +7,7 @@
 <html>
 <body>
 <h1>Person Confirmation Page</h1>  
-<p>Here you can edit the selected person's first or last name.</p>  
+<p>The following data was entered into the database:</p>  
 
 <h2>Person Information</h2>
 <form:form modelAttribute="editedPerson" commandName="person" method="POST" action="${pageContext.request.contextPath}/edit/${person.id}">

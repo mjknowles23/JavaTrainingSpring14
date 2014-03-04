@@ -6,8 +6,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <body>
-<h1>List of teams</h1>  
-<p>Here you can see the list of the teams, edit them, remove or update.</p>  
+<h1>List of people in the AdventureWorks database.</h1>  
+<p>You can also add, update, or delete a person.</p>  
 
 <p><a href="${pageContext.request.contextPath}/add">Add Person</a></p> 
 <table border="1" cellspacing="0" cellpadding="0">  

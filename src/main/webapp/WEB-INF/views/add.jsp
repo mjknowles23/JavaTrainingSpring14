@@ -7,7 +7,7 @@
 <html>
 <body>
 <h1>Add Person</h1>  
-<p>Here you can a new person to the AdventureWorks database.</p>  
+<p>Here you can add a new person to the AdventureWorks database.</p>  
 
 <h2>Person Information</h2>
 <form:form modelAttribute="newPerson" commandName="person" method="POST" action="${pageContext.request.contextPath}/add/">
